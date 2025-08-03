@@ -1,0 +1,109 @@
+/* Background styles */
+body {
+  margin: 0;
+  height: 100vh;
+  background: url('../../assets/background.png') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(3px) brightness(0.7);
+  z-index: -1;
+}
+
+/* Auth container */
+.auth-container {
+  background: rgba(80, 80, 80, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 380px;
+  margin: 5vh auto;
+  text-align: center;
+  color: rgb(46, 45, 45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.auth-input::placeholder{
+  color: rgb(46, 45, 45);
+}
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.auth-container p {
+  margin-bottom: 2rem;
+  color: rgb(46, 45, 45);
+}
+
+/* Input fields */
+.auth-container input {
+  width: 100%;
+  padding: 14px;
+  margin: 0.8rem 0;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(46, 45, 45);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.auth-container input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.3);
+}
+
+/* Button styles */
+.auth-container button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 1.5rem;
+  background: rgba(76, 175, 80, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50px; /* Oval shape */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.auth-container button:hover {
+  background: rgba(69, 160, 73, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Link styles */
+.auth-link {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.auth-link a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+  color: #45a049;
+}

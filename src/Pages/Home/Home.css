@@ -25,7 +25,10 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
+
+
 
 /* Content container */
 .era-selection {
@@ -35,7 +38,7 @@ body, html {
 }
 
 .title {
-  color: white;
+  color: rgb(51, 50, 50);
   font-size: 3rem;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -57,9 +60,9 @@ body, html {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(60, 59, 59, 0.7);
   backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px rgba(26, 25, 25, 0.2);
 }
 
 .card-image {
@@ -88,7 +91,7 @@ body, html {
 
 .card-content p {
   font-size: 1.1rem;
-  color: #444;
+  color: #242424;
   margin-bottom: 1.5rem;
   text-align: center;
   font-family: 'Old Newspaper Font', serif; /* Added font */
