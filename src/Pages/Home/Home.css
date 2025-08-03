@@ -1,0 +1,125 @@
+/* Font Import */
+@font-face {
+  font-family: 'Old Newspaper Font';
+  src: url('/fonts/Old Newspaper Font.ttf') format('truetype');
+}
+
+/* Reset and base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Old Newspaper Font', serif; /* Added font */
+}
+
+/* Main container - full bleed background */
+.home-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('../../assets/background.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Content container */
+.era-selection {
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  font-family: 'Old Newspaper Font', serif; /* Added font */
+}
+
+/* Rest of your existing CSS remains completely unchanged */
+.era-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  height: 65vh;
+}
+
+.era-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  height: 55%;
+  background-size: cover;
+  background-position: center;
+  margin: 1rem 1rem 0 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.card-content {
+  padding: 1.5rem;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  color: #222;
+  font-family: 'Old Newspaper Font', serif; /* Added font */
+}
+
+.card-content p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: 'Old Newspaper Font', serif; /* Added font */
+}
+
+.play-button {
+  padding: 0.6rem 2rem;
+  background: #3a3a3a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Old Newspaper Font', serif; /* Added font */
+}
+
+.play-button:hover {
+  background: #2a2a2a;
+  transform: translateY(-2px);
+}
+
+.medieval {
+  background-image: url('/medieval.png');
+}
+
+.mythological {
+  background-image: url('/mythological.png');
+}
+
+.era-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
