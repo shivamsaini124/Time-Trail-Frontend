@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 import backgroundImage from '../../assets/background.png';
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <div className="home-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="era-selection">
         <h1 className="title">Choose Your Adventure Era</h1>
         
@@ -14,7 +15,7 @@ const Home = () => {
             <div className="card-content">
               <h2>Medieval Events</h2>
               <p>Knights, castles, and political intrigue</p>
-              <button className="play-button">Play</button>
+              <Link to="/medieval/stories" className="play-button">Play</Link>
             </div>
           </div>
           
@@ -23,7 +24,7 @@ const Home = () => {
             <div className="card-content">
               <h2>Mythological Events</h2>
               <p>Gods, monsters, and ancient prophecies</p>
-              <button className="play-button">Play</button>
+              <Link to="/mythological/stories" className="play-button">Play</Link>
             </div>
           </div>
         </div>

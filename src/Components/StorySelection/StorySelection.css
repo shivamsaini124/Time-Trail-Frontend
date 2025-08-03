@@ -1,0 +1,176 @@
+.selection-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+  overflow-y: auto;
+}
+
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.selection-title {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ... (keep previous styles for container, overlay, title) ... */
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Wider minimum */
+  gap: 3rem; /* More spacing */
+  padding: 2rem;
+  width: 95%;
+  max-width: 1400px; /* Wider container */
+}
+
+.story-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.story-blur-box {
+  width: 100%;
+  height: 200px; /* Taller boxes */
+  min-width: 320px; /* Wider minimum */
+  background: rgba(100, 100, 100, 0.6);
+  backdrop-filter: blur(12px); /* Stronger blur */
+  border-radius: 24px; /* Softer rounded corners */
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle inner glow effect */
+.story-blur-box::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.story-blur-box:hover {
+  background: rgba(120, 120, 120, 0.7);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.story-blur-box:hover::before {
+  opacity: 1;
+}
+
+.story-blur-box.selected {
+  background: rgba(70, 70, 70, 0.8);
+  box-shadow: 0 0 0 4px #ffffff, 
+              0 12px 45px rgba(0, 0, 0, 0.5);
+}
+
+.story-text {
+  color: white;
+  font-size: 1.4rem; /* Larger text */
+  font-weight: 600;
+  text-align: center;
+  padding: 0 1.5rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.5px;
+}
+
+/* ... (keep previous styles for generate button and backgrounds) ... */
+
+.generate-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.generate-btn {
+  position: relative;
+  width: 180px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.oval-blur-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(100, 100, 100, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 50px; /* Makes it oval */
+  transition: all 0.3s ease;
+}
+
+.generate-btn:hover .oval-blur-box {
+  background: rgba(150, 150, 150, 0.6);
+  transform: scale(1.05);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.play-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: rgba(200, 150, 50, 0.7);
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  background: rgba(200, 150, 50, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Backgrounds */
+.medieval-bg {
+  background-image: url('../../public/medieval.png');
+}
+
+.mythological-bg {
+  background-image: url('../../public/mythological.png');
+}
